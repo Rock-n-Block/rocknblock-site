@@ -1,5 +1,5 @@
 include ../seo/favicons
-include ../seo/preloader
+//- include ../seo/preloader
 
 doctype html
 html(lang="en")
@@ -9,7 +9,7 @@ html(lang="en")
         meta(content="index, nofollow" name="robots")
         meta(content="width=device-width, initial-scale=1" name="viewport")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
-        +head-preloader
+        //- +head-preloader
         link(rel="preload" href="css/style.min.css" as="style")
         link(rel="preload" href="js/main.min.js" as="script")
         link(rel="manifest" href="/manifest.webmanifest")
@@ -32,7 +32,7 @@ html(lang="en")
             meta(property='og:title' content='Rock`n`Block Website')
             meta(property='og:description' content='Blockchain implementation. We are engaged in custom development and implementation of software based on blockchain technologies for business and startups.')
     body
-        +body-preloader
+        //- +body-preloader
         block header
         block content
         block footer

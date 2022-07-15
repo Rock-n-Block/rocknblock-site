@@ -2477,9 +2477,21 @@ header {
       #case-1-#{$i}-img-1:checked ~ .case-1-#{$i}-img-1 {
         display: flex;
       }
+      // case-1-1-img-1
+      #case-1-#{$i}-img-1:checked ~ label[for=case-1-#{$i}-img-1] {
+        opacity: 0.3;
+        pointer-events: none;
+        cursor: default;
+      }
   
       #case-1-#{$i}-img-2:checked ~ .case-1-#{$i}-img-2 {
         display: flex;
+      }
+      // case-1-1-img-2
+      #case-1-#{$i}-img-2:checked ~ label[for=case-1-#{$i}-img-2] {
+        opacity: 0.3;
+        pointer-events: none;
+        cursor: default;
       }
     }
   }
@@ -2540,6 +2552,9 @@ header {
       background-color: transparent;
       border: none;
       display: flex;
+    }
+    label{
+      transition: all 0.5s;
     }
   }
 
