@@ -1,4 +1,5 @@
 include ../seo/favicons
+include ../seo/preloader
 
 doctype html
 html(lang="en")
@@ -8,6 +9,7 @@ html(lang="en")
         meta(content="index, nofollow" name="robots")
         meta(content="width=device-width, initial-scale=1" name="viewport")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
+        +head-preloader
         link(rel="preload" href="css/style.min.css" as="style")
         link(rel="preload" href="js/main.min.js" as="script")
         link(rel="manifest" href="/manifest.webmanifest")
@@ -29,13 +31,24 @@ html(lang="en")
             meta(property='og:image' content='https://rocknblock.io/img/share.png')
             meta(property='og:title' content='Rock`n`Block Website')
             meta(property='og:description' content='Blockchain implementation. We are engaged in custom development and implementation of software based on blockchain technologies for business and startups.')
-
     body
+        +body-preloader
         block header
         block content
         block footer
         block scripts
             link(rel="stylesheet" href="css/style.min.css")
             script(defer src='js/main.min.js')
+            noscript
+                a(href="https://www.livechat.com/chat-with/9683030/" rel="nofollow") Chat with us
+                | , powered by 
+                a(href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank") LiveChat
+        ul.side-socials
+            li.side-socials__link.side-socials__link_tg
+                a.icon(href='https://t.me/rocknblock' rel="noreferrer" target="_blank")
+                    img(src=`../../img/social/icon-footer-tg-mask.svg` alt='tg')
+            li.side-socials__link.side-socials__link_whatsapp
+                a.icon(href='https://api.whatsapp.com/send?phone=16232304354' rel="noreferrer" target="_blank")
+                    img(src=`../../img/social/icon-footer-whatsapp-mask.svg` alt='whatsapp')
         div#btnScrollToTop
             img(src="../../img/icons/icon-arrow-top-mask.svg" alt="arrow top")

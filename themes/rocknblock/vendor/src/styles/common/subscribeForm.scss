@@ -1,0 +1,88 @@
+.sp-force-hide {
+    display: none;
+}
+
+.sp-form[sp-id="213867"] {
+    display: block;
+    background: transparent;
+    padding: 15px;
+    padding-top: 35px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    border-top: 1px solid #444444;
+    border-bottom: 1px solid #444444;
+    color: #fff;
+    font-variant: none;
+    .form__wrapper{
+        flex: 1 0 50%;
+    }
+}
+
+.sp-form[sp-id="213867"] input[type="checkbox"] {
+    display: inline-block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sp-form[sp-id="213867"] .sp-form-fields-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    gap: 20px;
+    @include b(900){
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.sp-form[sp-id="213867"] .sp-form-control {
+    border-style: solid;
+    border-width: 1px;
+    font-size: 15px;
+    padding-left: 8.75px;
+    padding-right: 8.75px;
+    border-radius: 4px;
+    height: 35px;
+    width: 100%;
+    color: #444444;
+}
+
+.sp-control-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.sp-form[sp-id="213867"] .sp-button-messengers {
+    border-radius: 4px;
+}
+
+.sp-form[sp-id="213867"] .sp-button {
+    border-radius: 4px;
+    background-color: #e60017;
+    color: #ffffff;
+    width: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+    box-shadow: none;
+    border-width: 1px;
+    border-color: #fff5f5;
+    border-style: solid;
+}
+
+.sp-form[sp-id="213867"] .sp-button-container {
+    text-align: left;
+}
+
+.sp-form .sp-field {
+    padding-top: 0;
+    padding-left: 0;
+}

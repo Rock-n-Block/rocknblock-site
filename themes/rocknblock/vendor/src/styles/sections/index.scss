@@ -492,7 +492,9 @@
       color: #ffffff99;
       // opacity: 0.4;
     }
-
+    .icon-container{
+      height: 80px;
+    }
     &:hover {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #dc2c2c;
 
@@ -936,10 +938,18 @@ header {
         opacity: 0.7;
       }
     }
+    a.form-social-links__book{
+      border-radius: 50%;
+      opacity: 1;
+      &:hover{
+        opacity: 1;
+        background-color: #dc2c2c;
+      }
+    }
   }
 
   .form-info-text {
-    font: normal normal 16px/23px TTCommons, sans-serif;
+    font: normal none 16px/23px TTCommons, sans-serif;
     margin: 0;
     text-align: center;
     opacity: 0.5;
@@ -1278,7 +1288,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 50px 0;
+    margin: 20px 0 50px;
 
     
     .s-title {
@@ -1321,14 +1331,20 @@ header {
   }
 
   .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    flex: 1 0 auto;
+    span{
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: bold;
+    }
     &__list {
-      margin: 0 40px;
+      flex: 1 0 auto;
       display: flex;
-      justify-content: center;
+      // justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
 
@@ -1347,11 +1363,17 @@ header {
       align-items: center;
       margin: 10px 12.5px;
       cursor: pointer;
-      width: 44px;
-      height: 44px;
+      width: 35px;
+      height: 35px;
       border: 1px solid #dc2c2c;
       border-radius: 50%;
       transition: 0.4s ease;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
 
       @include b(460) {
         margin: 10px 5px;
@@ -2359,7 +2381,7 @@ header {
   }
 
   &__description {
-    display: none;
+    // display: none;
 
     font-family: 'Karla', sans-serif;
     font-size: 20px;
@@ -2987,8 +3009,8 @@ header {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 71px;
-  left: calc(50% + 520px);
+  bottom: 16px;
+  left: 8px;
   width: 48px;
   height: 48px;
   background: #1d1b21;
@@ -2999,9 +3021,9 @@ header {
   transition: 0.4s ease;
 
   @include b(1300) {
-    left: auto;
-    right: 1rem;
-    bottom: 50px;
+    // left: auto;
+    // right: 1rem;
+    // bottom: 50px;
   }
 
   &:hover {
@@ -3012,5 +3034,44 @@ header {
   img {
     margin: auto;
     display: block;
+  }
+}
+
+.side-socials{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: fixed;
+  bottom: 84px;
+  right: 0;
+  z-index: 2;
+
+  // @include b(1200) {
+  //   flex-direction: row;
+  //   right: 84px;
+  //   bottom: 16px
+  // }
+
+  &__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #dc2c2c;
+    border-radius: 50%;
+    transition: 0.4s ease;
+    z-index: 2;
+    img{
+      width: 32px;
+    }
+
+
+
+    &:hover {
+      background-color: #dc2c2c;
+    }
   }
 }
